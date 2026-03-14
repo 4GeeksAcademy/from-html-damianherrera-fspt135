@@ -1,0 +1,11 @@
+label {
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.boton {
+    color: white;
+    background: none;
+    border: none;
+    width: 100%;
+    height: 100%;
+}

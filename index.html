@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Form</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+
+<body>
+    <div class="border" style="margin: 10px;">
+    <form clas="container-fluid" style="margin: 20px;">
+        <!--Titulo-->
+        <div class="row border bg-body-secondary">
+            <h4><strong>Payment form</strong></h4>
+        </div>
+        <!--Titulo-->
+        <!--Alerta-->
+        <div class="row alert alert-danger" role="alert" style="padding: 5px; margin: 5px;">
+            Some fields are missing
+        </div>
+        <!--Alerta-->
+        <!--Primera fila-->
+        <div class="row">
+            <!-- no se porque no me finciona el minlength y maxlength ayuda-->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <label for="card">Card #</label>
+                <input type="number" name="card" required class="form-control" placeholder="xxxxxxxxxxxxxxx"
+                    aria-label="xxxxxxxxxxxxxxx" minlength="14" maxlength="16">
+            </div>
+            <div class="col-sm-12 col-md-2 col-lg-2">
+                <label for="cvc">CVC #</label>
+                <input type="number" name="cvc" required class="form-control" placeholder="0000" aria-label="0000"
+                    aria-describedby="basic-addon1" minlength="3" maxlength="4">
+            </div>
+            <div class="col-sm-12 col-md-4 col-lg-4">
+                <label for="amount">Amount</label>
+                <div class="input-group mb-3">
+                    <span class="input-group-text">$</span>
+                    <input type="number" name="amount" required class="form-control" placeholder="Amount"
+                        aria-label="Amount (to the nearest dollar)">
+                </div>
+            </div>
+        </div>
+        <!--Primera fila-->
+        <!--Segunda fila-->
+        <div class="row">
+            <!--Lado izquierdo-->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <label for="fname">First Name</label>
+                <input type="text" name="fname" required class="form-control">
+                <label for="city">City</label>
+                <input type="text" name="city" required class="form-control">
+                <div class="flow">
+                    <div class="col-sm-12 col-md-6 col-lg-6" style="margin-top: 10px; margin-bottom: 10px;">
+                        We accept:
+                    </div>
+                    <div class="d-flex">
+                        <div class="col-1 bg-secondary">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions"
+                                id="inlineRadio1" value="option1">
+                            <label class="form-check-label" for="inlineRadio1"><i
+                                    class="fa-brands fa-cc-mastercard fa-xl"></i></label>
+                        </div>
+                        <div class="col-1 bg-secondary">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions"
+                                id="inlineRadio2" value="option2">
+                            <label class="form-check-label" for="inlineRadio2"><i
+                                    class="fa-brands fa-cc-visa fa-xl"></i></label>
+                        </div>
+                        <div class="col-1 bg-secondary">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions"
+                                id="inlineRadio3" value="option3">
+                            <label class="form-check-label" for="inlineRadio3"><i
+                                    class="fa-brands fa-cc-diners-club fa-xl"></i></label>
+                        </div>
+                        <div class="col-1 bg-secondary">
+                            <input class="form-check-input" type="radio" required name="inlineRadioOptions"
+                                id="inlineRadio4" value="option4">
+                            <label class="form-check-label" for="inlineRadio4"><i
+                                    class="fa-brands fa-cc-amex fa-xl"></i></label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!--Lado izquierdo-->
+            <!--lado derecho-->
+            <div class="col-sm-12 col-md-6 col-lg-6">
+                <label for="lname">Last Name</label>
+                <input type="text" name="lname" required class="form-control">
+                <div class="row">
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label for="state">State</label>
+                        <div class="input-group mb-3">
+                            <select name="state" class="form-select" id="inputGroupSelect01">
+                                <option selected>Pick a state</option>
+                                <option value="1">Texas</option>
+                                <option value="2">California</option>
+                                <option value="3">Virginia</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="col-sm-12 col-md-6 col-lg-6">
+                        <label for="pcode">Postal Code</label>
+                        <input type="number" required name="pcode" class="form-control" minlength="5" maxlength="5">
+                    </div>
+                </div>
+                <div class="col" style="margin-top: 10px; margin-bottom: 10px;">Menssage</div>
+                <textarea class="form-control" aria-label="With textarea"></textarea>
+                <div class="col form-text" style="margin-top: 10px; margin-bottom: 10px;">
+                    Add any notes here.
+                </div>
+            </div>
+            <!--lado derecho-->
+        </div>
+        <!--Segunda fila-->
+        <!--Botones-->
+        <div class="flow d-flex justify-content-end">
+            <button type="button" class="btn btn-secondary btn-sm">
+                <input class="boton" type="reset" value="Cancel" />
+            </button>
+            <button type="button" class="btn btn-primary btn-sm">
+                <input class="boton" type="submit" value="Send" />
+            </button>
+        </div>
+        <!--Botones-->
+    </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>
